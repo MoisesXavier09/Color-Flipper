@@ -11,7 +11,6 @@ let b = Math.floor(Math.random() * 256);
 let color = `rgb(${r}, ${g}, ${b})`;
 main.style.backgroundColor = color;
 spanColor.innerText = color;
-spanColor.style.color = color;
 
 btnColorFlipper.classList.add("active");
 
@@ -24,7 +23,6 @@ btnColorFlipper.addEventListener("click", () => {
     btnSimpleHex.classList.remove("active");
     main.style.backgroundColor = color;
     spanColor.innerText = color;
-    spanColor.style.color = color;
   }
 });
 btnSimpleHex.addEventListener("click", () => {
@@ -34,7 +32,6 @@ btnSimpleHex.addEventListener("click", () => {
     const hexColor = rgbToHex(color);
     main.style.backgroundColor = hexColor;
     spanColor.innerText = hexColor;
-    spanColor.style.color = hexColor;
   } else {
     btnColorFlipper.classList.add("active");
     btnSimpleHex.classList.toggle("active");
@@ -57,11 +54,9 @@ btnChangeColor.addEventListener("click", () => {
   if (btnColorFlipper.classList.contains("active")) {
     main.style.backgroundColor = color;
     spanColor.innerText = color;
-    spanColor.style.color = color;
   } else {
     const hexColor = rgbToHex(color);
     main.style.backgroundColor = hexColor;
     spanColor.innerText = hexColor;
-    spanColor.style.color = hexColor;
   }
 });
